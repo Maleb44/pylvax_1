@@ -1,3 +1,5 @@
+import datetime
+
 from bottle import route, run
 
 
@@ -17,8 +19,6 @@ def hello(name='valaki', width=300):
 
     return output_template.format(img=img, name=name_title)
 
-run(host='localhost', port=8080, debug=True)
-
 
 @route('/sq/<number>')
 def sq(number):
@@ -30,3 +30,15 @@ def sq(number):
 def is_palindrom(word):
     result = word == word[::-1]
     return str(result)
+
+
+# GMT - Greenwich Mean Time, bad
+# UTC - 0 timezone, no daylight saving time, good!!!
+
+@route('/time_now')
+def time_now():
+    t = datetime.datetime.utcnow()
+    return t.isoformat()
+
+
+run(host='localhost', port=8080, debug=True)
