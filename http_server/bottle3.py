@@ -23,7 +23,7 @@ def get_temperature_lat_lon(lat, lon):
 
 
 @route('/temperature/<lat>/<lon>')
-def temp_endpoint_lat_lon(lat, lon):
+def temperature_lat_lon(lat, lon):
     lat = float(lat)
     lon = float(lon)
     temp = get_temperature_lat_lon(lat, lon)
