@@ -1,0 +1,10 @@
+http://pylvax.bogi.org:8080/docs/dev/tutorial.html?key=value#quickstart-hello-world
+
+http:// - protocol
+bogi.org - domain
+pylvax. - subdomain
+pylvax.bogi.org - host / hostname
+:8080 - port
+/docs/dev/tutorial.html - endpoint, route, path
+?key=value - query parameter (GET request)
+#quickstart-hello-world - hash
